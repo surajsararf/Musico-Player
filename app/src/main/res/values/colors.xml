@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF2255</color>
+    <color name="transparentwhite">#99ffffff</color>
+    <color name="seekbar_bg">#77ffffff</color>
+    <color name="seekbar_progress">#99000000</color>
+    <color name="fastScrollBarColor">#c1c1c1</color>
+    <color name="item_hover_bg">#aaEAEAEA</color>
+    <color name="toolbar_bg">#bbFF2255</color>
+    <color name="toolbar_border">#cccccc</color>
+    <color name="transparentwhite1">#ccffffff</color>
+    <color name="activitybgcolor">#ccffffff</color>
+</resources>

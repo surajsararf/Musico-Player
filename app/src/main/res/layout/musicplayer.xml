@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/album_art_area"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/album_art"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:id="@+id/album_art1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/godown"
+            android:layout_width="@dimen/dimen30"
+            android:layout_height="@dimen/dimen30"
+            android:layout_marginLeft="@dimen/dimen20"
+            android:layout_marginTop="@dimen/dimen40"
+            android:clickable="true"
+            android:src="@drawable/downarrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/album_art_area"
+        android:background="@android:color/white">
+        <ImageView
+            android:id="@+id/control_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:id="@+id/control_bg1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparentwhite1" />
+
+        <RelativeLayout
+            android:id="@+id/time_area"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen20"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen10"
+            android:layout_marginTop="@dimen/dimen5">
+
+            <TextView
+                android:id="@+id/present_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00" />
+
+            <TextView
+                android:id="@+id/total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="03:40" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/name_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time_area"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="@dimen/dimen20"
+            android:paddingLeft="@dimen/dimen10"
+            android:paddingRight="@dimen/dimen10"
+            android:paddingTop="@dimen/dimen20">
+
+            <TextView
+                android:id="@+id/songname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="SongName"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize16"/>
+
+            <TextView
+                android:id="@+id/artist_album_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/songname"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen10"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="SongName SongNameSongName "
+                android:textSize="@dimen/textsize14"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/name_area">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dimen140"
+                android:layout_height="@dimen/dimen40"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+                <RelativeLayout
+                    android:id="@+id/previous"
+                    android:layout_width="@dimen/dimen35"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:layout_alignParentLeft="true">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen24"
+                        android:layout_height="@dimen/dimen24"
+                        android:src="@drawable/previous"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/play"
+                    android:layout_width="@dimen/dimen40"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen15"
+                    android:clickable="true"
+                    android:layout_toRightOf="@+id/previous"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen30"
+                        android:layout_height="@dimen/dimen30"
+                        android:src="@drawable/play"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pause"
+                    android:layout_width="@dimen/dimen40"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen15"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:layout_toRightOf="@+id/previous">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen30"
+                        android:layout_height="@dimen/dimen30"
+                        android:src="@drawable/pause"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/next"
+                    android:layout_width="@dimen/dimen35"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen24"
+                        android:layout_height="@dimen/dimen24"
+                        android:src="@drawable/next"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen20"
+        android:layout_below="@+id/album_art_area"
+        android:layout_marginTop="-5.6dp"
+        android:paddingBottom="@dimen/dimen0"
+        android:paddingLeft="@dimen/dimen0"
+        android:paddingRight="@dimen/dimen0"
+        android:paddingTop="@dimen/dimen0"
+        android:max="10000"
+        android:progressDrawable="@drawable/seekbar_bg"
+        android:thumb="@drawable/thumb" />
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/openmusicplayer"
+        android:icon="@drawable/ic_music"
+        android:title="Open Musico Player"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/gotocurrentsong"
+        android:icon="@drawable/gotocurrentsong"
+        android:title="GoTo Current Playing Song"
+        app:showAsAction="always" />
+
+</menu>

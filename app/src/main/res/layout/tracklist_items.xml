@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen60"
+    android:clickable="true"
+    android:background="@drawable/item_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen20"
+        android:layout_marginRight="@dimen/dimen40"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize16"
+            android:id="@+id/songname"
+            android:text="songname"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textSize="@dimen/textsize14"
+            android:layout_marginLeft="@dimen/dimen5"
+            android:id="@+id/artist_album_name"
+            android:text="artist"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="@dimen/dimen24"
+        android:layout_height="@dimen/dimen24"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dimen12"
+        android:id="@+id/isplay"
+        android:src="@drawable/pause"/>
+</RelativeLayout>

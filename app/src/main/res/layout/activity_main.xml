@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.surajsararf.musicoplayer.MainActivity"
+    android:id="@+id/root">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentarea"
+        android:layout_above="@+id/adView_ma">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:id="@+id/bg_image"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:id="@+id/bg_image1"/>
+
+    <include layout="@layout/toolbar" android:id="@+id/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/activitybgcolor"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/rootoflist">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerview"/>
+
+    </RelativeLayout>
+
+    <xyz.danoz.recyclerviewfastscroller.vertical.VerticalRecyclerViewFastScroller
+        android:id="@+id/fast_scroller"
+        android:layout_width="@dimen/dimen20"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingRight="@dimen/dimen5"
+        android:paddingEnd="@dimen/dimen5"
+        app:rfs_barColor="@color/transparentwhite1"
+        app:rfs_handleBackground="@drawable/fast_scroller_handle"
+        android:layout_marginBottom="@dimen/dimen45"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/dimen0"/>
+
+    <include layout="@layout/bothmusicplayer"
+        android:id="@+id/bothmusicplayer" />
+
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView_ma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/b322_a00_u_iMP12"
+        android:background="@android:color/white"
+        android:layout_marginBottom="@dimen/dimen45"
+        android:padding="@dimen/dimen0">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

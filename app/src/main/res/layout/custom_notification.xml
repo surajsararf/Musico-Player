@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/previous"
+        android:layout_width="@dimen/dimen35"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="@dimen/dimen24"
+            android:layout_height="@dimen/dimen24"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/previous" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/songdetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen2"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="@dimen/dimen0"
+        android:layout_toLeftOf="@+id/rightbtn"
+        android:layout_toRightOf="@+id/previous">
+
+        <TextView
+            android:id="@+id/songname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen5"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Hello"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize16" />
+
+        <TextView
+            android:id="@+id/artist_album_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/songname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen2"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:text="artist"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize14" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rightbtn"
+        android:layout_width="wrap_content"
+
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/close"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dimen50"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/album_art"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#99000000" />
+
+            <RelativeLayout
+                android:id="@+id/play"
+                android:layout_width="@dimen/dimen50"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen26"
+                    android:layout_height="@dimen/dimen26"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/play" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/pause"
+                android:layout_width="@dimen/dimen50"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen26"
+                    android:layout_height="@dimen/dimen26"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/pause" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/next"
+            android:layout_width="@dimen/dimen35"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/dimen24"
+                android:layout_height="@dimen/dimen24"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/next" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/close"
+        android:layout_width="@dimen/dimen30"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="@dimen/dimen20"
+            android:layout_height="@dimen/dimen20"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/close" />
+    </RelativeLayout>
+
+</RelativeLayout>
